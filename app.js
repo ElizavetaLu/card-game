@@ -70,7 +70,7 @@ const checkCards = (e) => {
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard')
-    
+
     if (flippedCards.length === 2) {
         if (
             flippedCards[0].getAttribute('id') ===
@@ -142,50 +142,35 @@ const restart = () => {
     let faces = document.querySelectorAll('.face');
     let cards = document.querySelectorAll('.card');
     section.style.pointerEvents = 'none';
+
     cardData.forEach((item, index) => {
         cards[index].classList.remove('toggleCard');
-        setTimeout(() => {
-            cards[index].style.pointerEvents = 'all';
-            faces[index].style.background = item.color;
-            cards[index].setAttribute('id', item.name);
-            section.style.pointerEvents = 'all';
-
-        }, 100)
+        cards[index].style.pointerEvents = 'all';
+        faces[index].style.background = item.color;
+        cards[index].setAttribute('id', item.name);
+        section.style.pointerEvents = 'all';
     });
+
     playerLives = 3;
     playerLivesCount.textContent = playerLives;
-    score.textContent = 0;
-    level.textContent = 0;
+
+    scoreNumb = 0;
+    score.textContent = scoreNumb;
+
+    levelNumb = 0;
+    level.textContent = scoreNumb;
 }
 const startButton = document.getElementById('startBtn')
 startButton.addEventListener('click', startGame)
 
 function startGame() {
 
-
     const cardWithFlippClass = document.querySelector('.flipped')
-    if(cardWithFlippClass){
+    if (cardWithFlippClass) {
         cardWithFlippClass.classList.remove('flipped');
     }
 
-    let cardData = randomize();
-    let faces = document.querySelectorAll('.face');
-    let cards = document.querySelectorAll('.card');
-    section.style.pointerEvents = 'none';
-    cardData.forEach((item, index) => {
-        cards[index].classList.remove('toggleCard');
-        setTimeout(() => {
-            cards[index].style.pointerEvents = 'none';
-            faces[index].style.background = item.color;
-            cards[index].setAttribute('id', item.name);
-            section.style.pointerEvents = 'all';
-
-        }, 0)
-    });
-    playerLives = 3;
-    playerLivesCount.textContent = playerLives;
-    level.textContent = 0;
-    score.textContent = 0;
+    restart()
 
     backSide = document.querySelectorAll('.back')
     backSide.forEach((div) => div.style.display = 'none')
