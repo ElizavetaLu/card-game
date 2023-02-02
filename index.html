@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="placeForIp"></div>
     <div class="main">
-        <!-- <div class="placeForIp"></div> -->
-        <div class="rule"><b>Pay attention!</b> You can't click on the same card twice without consequences, 'cause after that your next flipped card will burn 1 your attempt! This way you won't be able to cheat. Life is not fair. Click <b>"START"</b>, be careful and good luck!</div>
+        <div class="rule"><span class="warning">Pay attention!</span> You can't click on the same card twice without
+            consequences, 'cause
+            after that your next flipped card will burn 1 your attempt! This way you won't be able to cheat. Life is not
+            fair. Click <span class="warning">"START"</span>, be careful and good luck!</div>
 
         <div class="container">
             <div class="menu">
                 <h1>Level: <span class="level"></span></h1>
                 <h2>Score: <span class="score"></span></h2>
                 <h3>Attempts: <span class="attempts"></span></h3>
-                <button id="startBtn">START</button>
+                <button id="startBtn">start</button>
             </div>
             <section></section>
         </div>
@@ -27,6 +33,6 @@
 
 
     <script src="app.js"></script>
-    <script src="ip.js"></script>
 </body>
+
 </html>

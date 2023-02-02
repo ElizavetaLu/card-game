@@ -67,6 +67,7 @@ const cardGenerator = () => {
 
 const checkCards = (e) => {
     const clickedCard = e.target;
+    console.log(clickedCard)
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard')
