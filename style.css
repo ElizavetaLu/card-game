@@ -3,15 +3,13 @@ body {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100vw;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-}
+    background-color: #ccc4eb;}
 
 .main {
     width: 730px;
     height: 680px;
     position: relative;
-    background-color: rgb(252, 248, 255);
+    background-color: #eceaf7;
     border-radius: 10px;
     overflow: hidden;
     top: 50px;
@@ -47,7 +45,7 @@ section {
 }
 
 .back {
-    background: #41347c;
+    background: #4c3374;
     backface-visibility: hidden;
 }
 
@@ -65,22 +63,26 @@ section {
 
 button {
     border: none;
-    background-color: #472bc4;
+    background-color: #8e6fbd;
     color: rgb(255, 253, 253);
     margin-top: 50px;
     width: 100%;
     padding: 10px 0px;
     border-radius: 5px;
     text-transform: uppercase;
+    box-shadow: 5px 7px 15px #a4a4a4ba;
     cursor: pointer;
+    transition: all .2s;
 }
 
 button:hover {
-    background-color: #472bc4f0;
+    background-color: #8e6fbde4;
 }
 
 button:active {
-    background-color: #472bc4;
+    background-color: #8e6fbd;
+    transform: translateY(1.5px);
+    box-shadow: 2px 2px 15px #a4a4a4ba;
 }
 
 .container {

@@ -14,22 +14,23 @@ score.textContent = scoreNumb;
 
 
 const getData = () => [
-    { color: '#DDA0DD', name: 'Plum' },
-    { color: '#00FFFF', name: 'Aqua' },
-    { color: '#8A2BE2', name: 'BlueViolet' },
-    { color: '#0000FF', name: 'Blue' },
-    { color: '#7FFF00', name: 'Chartreuse' },
-    { color: '#DC143C', name: 'Crimson' },
-    { color: '#808080', name: 'Gray' },
-    { color: '#FF4500', name: 'OrangeRed' },
-    { color: '#DDA0DD', name: 'Plum' },
-    { color: '#00FFFF', name: 'Aqua' },
-    { color: '#8A2BE2', name: 'BlueViolet' },
-    { color: '#0000FF', name: 'Blue' },
-    { color: '#7FFF00', name: 'Chartreuse' },
-    { color: '#DC143C', name: 'Crimson' },
-    { color: '#808080', name: 'Gray' },
-    { color: '#FF4500', name: 'OrangeRed' }
+    { color: '#f8eaae', name: 'Yellow' },
+    { color: '#daeebf', name: 'Green' },
+    { color: '#f5c59f', name: 'Orange' },
+    { color: '#b2e1e8', name: 'Blue' },
+    { color: '#f3ccdc', name: 'Pink' },
+    { color: '#c3beef', name: 'Violet' },
+    { color: '#eb8192', name: 'Red' },
+    { color: '#d6c0b8', name: 'Brown' },
+
+    { color: '#f8eaae', name: 'Yellow' },
+    { color: '#daeebf', name: 'Green' },
+    { color: '#f5c59f', name: 'Orange' },
+    { color: '#b2e1e8', name: 'Blue' },
+    { color: '#f3ccdc', name: 'Pink' },
+    { color: '#c3beef', name: 'Violet' },
+    { color: '#eb8192', name: 'Red' },
+    { color: '#d6c0b8', name: 'Brown' }
 ];
 
 const randomize = () => {
