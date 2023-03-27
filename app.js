@@ -40,7 +40,7 @@ const randomize = () => {
 };
 
 const cardGenerator = () => {
-    const cardData = randomize()
+    const cardData = randomize();
 
     cardData.forEach((item) => {
         const card = document.createElement('div');
@@ -52,7 +52,7 @@ const cardGenerator = () => {
         back.classList = 'back';
 
         face.style.background = item.color;
-        card.setAttribute('id', item.name)
+        card.setAttribute('id', item.name);
 
         section.appendChild(card);
         card.appendChild(face);
@@ -70,7 +70,7 @@ const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped');
-    const toggleCard = document.querySelectorAll('.toggleCard')
+    const toggleCard = document.querySelectorAll('.toggleCard');
 
     if (flippedCards.length === 2) {
         if (
@@ -80,14 +80,14 @@ const checkCards = (e) => {
 
             if (toggleCard.length !== 16) {
                 setTimeout(() => {
-                    flippedCards[0].querySelector('.face').style.background = '#d3e3ef'
-                    flippedCards[1].querySelector('.face').style.background = '#d3e3ef'
+                    flippedCards[0].querySelector('.face').style.background = '#d3e3ef';
+                    flippedCards[1].querySelector('.face').style.background = '#d3e3ef';
                 }, 1500);
             }
 
             flippedCards.forEach((card) => {
                 card.classList.remove('flipped');
-                card.style.pointerEvents = 'none'
+                card.style.pointerEvents = 'none';
             })
 
             scoreNumb++;
@@ -102,9 +102,7 @@ const checkCards = (e) => {
             playerLives--;
             playerLivesCount.textContent = playerLives;
 
-            if (playerLives === 0) {
-                restart()
-            }
+            if (playerLives === 0) restart();
         }
     }
 
@@ -127,14 +125,13 @@ const checkCards = (e) => {
 
                 }, 100)
 
-                backSide = document.querySelectorAll('.back')
-                backSide.forEach((div) => div.style.display = 'none')
+                backSide = document.querySelectorAll('.back');
+                backSide.forEach((div) => div.style.display = 'none');
                 setTimeout(() => {
-                    backSide.forEach((div) => div.style.display = 'block')
-
-                }, 4000)
+                    backSide.forEach((div) => div.style.display = 'block');
+                }, 4000);
             })
-        }, 1000)
+        }, 1000);
     }
 };
 
@@ -161,25 +158,24 @@ const restart = () => {
     levelNumb = 0;
     level.textContent = scoreNumb;
 }
-const startButton = document.getElementById('startBtn')
-startButton.addEventListener('click', startGame)
+const startButton = document.getElementById('startBtn');
+startButton.addEventListener('click', startGame);
 
 function startGame() {
+    const cardData = randomize();
+    const cardWithFlippClass = document.querySelector('.flipped');
 
-    const cardWithFlippClass = document.querySelector('.flipped')
-    if (cardWithFlippClass) {
-        cardWithFlippClass.classList.remove('flipped');
-    }
+    if (cardWithFlippClass) cardWithFlippClass.classList.remove('flipped');
 
-    restart()
+    restart();
 
-    backSide = document.querySelectorAll('.back')
-    backSide.forEach((div) => div.style.display = 'none')
+    backSide = document.querySelectorAll('.back');
+    backSide.forEach((div) => div.style.display = 'none');
 
     setTimeout(() => {
         backSide.forEach((div) => div.style.display = 'block')
         cardData.forEach((item, index) => cards[index].style.pointerEvents = 'all');
-    }, 4000)
+    }, 4000);
 }
 
 cardGenerator()
