@@ -68,7 +68,6 @@ const cardGenerator = () => {
 
 const checkCards = (e) => {
     const clickedCard = e.target;
-    console.log(clickedCard)
     clickedCard.classList.add('flipped');
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard')
@@ -114,9 +113,9 @@ const checkCards = (e) => {
         level.textContent = levelNumb;
 
         setTimeout(() => {
-            let cardData = randomize();
-            let faces = document.querySelectorAll('.face');
-            let cards = document.querySelectorAll('.card');
+            const cardData = randomize();
+            const faces = document.querySelectorAll('.face');
+            const cards = document.querySelectorAll('.card');
             section.style.pointerEvents = 'none';
             cardData.forEach((item, index) => {
                 cards[index].classList.remove('toggleCard');
@@ -140,9 +139,9 @@ const checkCards = (e) => {
 };
 
 const restart = () => {
-    let cardData = randomize();
-    let faces = document.querySelectorAll('.face');
-    let cards = document.querySelectorAll('.card');
+    const cardData = randomize();
+    const faces = document.querySelectorAll('.face');
+    const cards = document.querySelectorAll('.card');
     section.style.pointerEvents = 'none';
 
     cardData.forEach((item, index) => {
