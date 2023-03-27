@@ -112,11 +112,16 @@ const checkCards = (e) => {
 
         setTimeout(() => {
             const cardData = randomize();
+
             const faces = document.querySelectorAll('.face');
             const cards = document.querySelectorAll('.card');
+
             section.style.pointerEvents = 'none';
+
             cardData.forEach((item, index) => {
+
                 cards[index].classList.remove('toggleCard');
+
                 setTimeout(() => {
                     cards[index].style.pointerEvents = 'all';
                     faces[index].style.background = item.color;
@@ -127,6 +132,7 @@ const checkCards = (e) => {
 
                 backSide = document.querySelectorAll('.back');
                 backSide.forEach((div) => div.style.display = 'none');
+
                 setTimeout(() => {
                     backSide.forEach((div) => div.style.display = 'block');
                 }, 4000);
@@ -163,6 +169,8 @@ startButton.addEventListener('click', startGame);
 
 function startGame() {
     const cardData = randomize();
+    const cards = document.querySelectorAll('.card');
+    
     const cardWithFlippClass = document.querySelector('.flipped');
 
     if (cardWithFlippClass) cardWithFlippClass.classList.remove('flipped');
