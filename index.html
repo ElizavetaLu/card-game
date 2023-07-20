@@ -15,20 +15,26 @@
 
 <body>
     <div class="main">
-        <div class="rule"><span class="warning">Pay attention!</span> You can't click on the same card twice without
-            consequences, 'cause
-            after that your next flipped card will burn 1 your attempt! This way you won't be able to cheat. Life is not
-            fair. Click <span class="warning">"START"</span>, be careful and good luck!</div>
+        <div class="menu">
 
-        <div class="container">
-            <div class="menu">
-                <h1>Level: <span class="level"></span></h1>
-                <h2>Score: <span class="score"></span></h2>
-                <h3>Attempts: <span class="attempts"></span></h3>
-                <button id="startBtn">start</button>
+            <div class="row">
+                <h1 class="lvl"> <span class="level"></span> Level</h1>
+                <div>
+                    <div class="data-row">
+                        <div class="number attempts"></div>
+                        <div class="heart"></div>
+                    </div>
+                    <div class="data-row">
+                        <div class="number score"></div>
+                        <img class="trophy" src="trophy.png" alt="trophy" />
+                    </div>
+                </div>
             </div>
-            <section></section>
+
+            <button class="button" id="startBtn">start</button>
+
         </div>
+        <section></section>
     </div>
 
     <script src="app.js"></script>
