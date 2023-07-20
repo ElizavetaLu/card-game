@@ -5,7 +5,7 @@ let playerLives = 3;
 playerLivesCount.textContent = playerLives;
 
 const level = document.querySelector('.level');
-let levelNumb = 0;
+let levelNumb = 1;
 level.textContent = levelNumb;
 
 const score = document.querySelector('.score');
@@ -14,23 +14,23 @@ score.textContent = scoreNumb;
 
 
 const getData = () => [
-    { color: '#f8eaae', name: 'Yellow' },
-    { color: '#daeebf', name: 'Green' },
-    { color: '#f5c59f', name: 'Orange' },
-    { color: '#b2e1e8', name: 'Blue' },
-    { color: '#f3ccdc', name: 'Pink' },
-    { color: '#c3beef', name: 'Violet' },
-    { color: '#eb8192', name: 'Red' },
-    { color: '#d6c0b8', name: 'Brown' },
+    { color: '#feb73b', name: 'Yellow' },
+    { color: '#3f7841', name: 'Green' },
+    { color: '#ee5115', name: 'Orange' },
+    { color: '#11487d', name: 'Blue' },
+    { color: '#fa448c', name: 'Pink' },
+    { color: '#9350ad', name: 'Violet' },
+    { color: '#d62637', name: 'Red' },
+    { color: '#622a2d', name: 'Brown' },
 
-    { color: '#f8eaae', name: 'Yellow' },
-    { color: '#daeebf', name: 'Green' },
-    { color: '#f5c59f', name: 'Orange' },
-    { color: '#b2e1e8', name: 'Blue' },
-    { color: '#f3ccdc', name: 'Pink' },
-    { color: '#c3beef', name: 'Violet' },
-    { color: '#eb8192', name: 'Red' },
-    { color: '#d6c0b8', name: 'Brown' }
+    { color: '#feb73b', name: 'Yellow' },
+    { color: '#3f7841', name: 'Green' },
+    { color: '#ee5115', name: 'Orange' },
+    { color: '#11487d', name: 'Blue' },
+    { color: '#fa448c', name: 'Pink' },
+    { color: '#9350ad', name: 'Violet' },
+    { color: '#d62637', name: 'Red' },
+    { color: '#622a2d', name: 'Brown' }
 ];
 
 const randomize = () => {
@@ -80,8 +80,8 @@ const checkCards = (e) => {
 
             if (toggleCard.length !== 16) {
                 setTimeout(() => {
-                    flippedCards[0].querySelector('.face').style.background = '#d3e3ef';
-                    flippedCards[1].querySelector('.face').style.background = '#d3e3ef';
+                    flippedCards[0].querySelector('.face').style.background = '#949494';
+                    flippedCards[1].querySelector('.face').style.background = '#949494';
                 }, 1500);
             }
 
@@ -161,8 +161,8 @@ const restart = () => {
     scoreNumb = 0;
     score.textContent = scoreNumb;
 
-    levelNumb = 0;
-    level.textContent = scoreNumb;
+    levelNumb = 1;
+    level.textContent = levelNumb;
 }
 const startButton = document.getElementById('startBtn');
 startButton.addEventListener('click', startGame);
@@ -170,7 +170,7 @@ startButton.addEventListener('click', startGame);
 function startGame() {
     const cardData = randomize();
     const cards = document.querySelectorAll('.card');
-    
+
     const cardWithFlippClass = document.querySelector('.flipped');
 
     if (cardWithFlippClass) cardWithFlippClass.classList.remove('flipped');
